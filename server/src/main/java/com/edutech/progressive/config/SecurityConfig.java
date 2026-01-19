@@ -17,5 +17,4 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
             .and()
             .csrf().disable(); // Disable CSRF protection if it's not needed
     }
-    
 }
