@@ -5,11 +5,14 @@ import java.util.ArrayList;
 import java.util.Comparator;
 import java.util.List;
 
+import org.springframework.stereotype.Service;
+
 import com.edutech.progressive.dao.AccountDAO;
 import com.edutech.progressive.entity.Accounts;
 import com.edutech.progressive.service.AccountService;
-
+@Service
 public class AccountServiceImpl implements AccountService {
+    
     private AccountDAO accountDAO;
 
     private static List<Accounts> accountsList = new ArrayList<>();

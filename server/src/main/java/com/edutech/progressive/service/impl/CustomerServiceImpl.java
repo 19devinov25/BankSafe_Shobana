@@ -5,12 +5,14 @@ import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
 
+import org.springframework.stereotype.Service;
+
 import com.edutech.progressive.dao.CustomerDAO;
 import com.edutech.progressive.entity.Customers;
 import com.edutech.progressive.service.CustomerService;
-
+@Service
 public class CustomerServiceImpl implements CustomerService {
-
+      
     CustomerDAO customerDAO;
     private static List<Customers> customersList = new ArrayList<>();
 

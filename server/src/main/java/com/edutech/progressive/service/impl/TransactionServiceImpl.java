@@ -4,10 +4,12 @@ import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.List;
 
+import org.springframework.stereotype.Service;
+
 import com.edutech.progressive.dao.TransactionDAO;
 import com.edutech.progressive.entity.Transactions;
 import com.edutech.progressive.service.TransactionService;
-
+@Service
 public class TransactionServiceImpl implements TransactionService {
     private TransactionDAO transactionDAO;
 
