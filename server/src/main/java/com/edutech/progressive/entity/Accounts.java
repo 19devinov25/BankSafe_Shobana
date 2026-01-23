@@ -62,21 +62,20 @@ public class Accounts implements Comparable<Accounts> {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int accountId;
+  
+    private double balance;
     @ManyToOne
     @JoinColumn(name = "customerId") // name refers to the column name in the Accounts table
     private Customers customer;
-
-    private double balance;
 
     public Accounts() {
         // constrcutor
     }
 
-
     public Accounts(int accountId, int customerId, double balance) {
         this.accountId = accountId;
         this.customer.setCustomerId(customerId);
-        this.balance=balance;
+        this.balance = balance;
     }
 
     // Getters and setters
