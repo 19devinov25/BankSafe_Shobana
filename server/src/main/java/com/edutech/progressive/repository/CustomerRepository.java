@@ -1,17 +1,18 @@
 package com.edutech.progressive.repository;
-
+import com.edutech.progressive.entity.Customers;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.repository.query.Param;
+import org.springframework.stereotype.Repository;
+import java.util.List;
 
-import com.edutech.progressive.entity.Customers;
+@Repository
+public interface CustomerRepository extends JpaRepository<Customers, Integer> {
 
-public interface CustomerRepository extends JpaRepository<Customers,Integer>  {
-        Customers findByCustomerId(@Param("customerId") int customerId);
+    Customers findByCustomerId(int customerId);
 
-    void deleteByCustomerId(@Param("customerId") int customerId);
+    void deleteByCustomerId(int customerId);
 
-    Customers findByEmail(@Param("email") String email);
+    // Customers findByEmail(@Param("email") String email);
 
-    Customers findByUsername(String username);
-
+    // Customers findByUsername(String username);
 }
